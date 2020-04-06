@@ -3,26 +3,22 @@
     <header>
       <nav>
         <ul>
-          <li class="nav-item"><img class="logo" src="@/assets/build-a-bot-logo.png">Build-a-Bot</li>
+          <router-link class="nav-link" :to="{name: 'Home'}">
+            <li class="nav-item"><img class="logo" src="@/assets/build-a-bot-logo.png">Build-a-Bot</li>
+          </router-link>
         </ul>
       </nav>
     </header>
     <main>
-      <RobotBuilder />
+      <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
-  //import HomePage from '@/home/HomePage.vue'
-  import RobotBuilder from '@/build/RobotBuilder.vue'
-
   export default {
     name: 'App',
-    components: {
-      //HomePage,
-      RobotBuilder
-    }
+
   }
 </script>
 <style>
@@ -32,7 +28,6 @@
   }
 </style>
 <style scoped>
-
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
   }
@@ -66,5 +61,10 @@
   .logo {
     vertical-align: middle;
     height: 30px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
   }
 </style>

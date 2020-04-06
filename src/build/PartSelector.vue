@@ -43,7 +43,7 @@
       this.emitSelectedPart();
     },
     methods: {
-      emitSelectedPart(){
+      emitSelectedPart() {
         this.$emit('partSelected', this.selectedPart);
       },
       selectNextPart() {

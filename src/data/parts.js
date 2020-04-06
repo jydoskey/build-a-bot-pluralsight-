@@ -1,11 +1,9 @@
 const images = require.context('./images', true, /\.png$/)
 
 const parts = {
-  heads: [
-    {
+  heads: [{
       id: 1,
-      description:
-        'A robot head with an unusually large eye and teloscpic neck -- excellent for exploring high spaces.',
+      description: 'A robot head with an unusually large eye and teloscpic neck -- excellent for exploring high spaces.',
       title: 'Large Cyclops',
       src: images('./head-big-eye.png'),
       type: 'heads',
@@ -22,8 +20,7 @@ const parts = {
     },
     {
       id: 3,
-      description:
-        'A large three-eyed head with a shredder for a mouth -- great for crushing light medals or shredding documents.',
+      description: 'A large three-eyed head with a shredder for a mouth -- great for crushing light medals or shredding documents.',
       title: 'Shredder',
       src: images('./head-shredder.png'),
       type: 'heads',
@@ -31,8 +28,7 @@ const parts = {
     },
     {
       id: 4,
-      description:
-        'A simple single-eyed head -- simple and inexpensive.',
+      description: 'A simple single-eyed head -- simple and inexpensive.',
       title: 'Small Cyclops',
       src: images('./head-single-eye.png'),
       type: 'heads',
@@ -40,16 +36,14 @@ const parts = {
     },
     {
       id: 5,
-      description:
-        'A robot head with three oscillating eyes -- excellent for surveillance.',
+      description: 'A robot head with three oscillating eyes -- excellent for surveillance.',
       title: 'Surveillance Bot',
       src: images('./head-surveillance.png'),
       type: 'heads',
       cost: 1255.5
     }
   ],
-  arms: [
-    {
+  arms: [{
       id: 1,
       description: 'An articulated arm with a claw -- great for reaching around corners or working in tight spaces.',
       title: 'Articulated',
@@ -91,8 +85,7 @@ const parts = {
       cost: 125
     }
   ],
-  torsos: [
-    {
+  torsos: [{
       id: 1,
       description: 'A torso that can bend slightly at the waist and equiped with a heat guage.',
       title: 'Flexible Gauged',
@@ -118,8 +111,7 @@ const parts = {
       onSale: true
     }
   ],
-  bases: [
-    {
+  bases: [{
       id: 1,
       description: 'A two wheeled base with an accelerometer for stability.',
       title: 'Double Wheeled',
