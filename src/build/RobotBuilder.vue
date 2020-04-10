@@ -65,6 +65,14 @@
       PartSelector,
       CollapsibleSection
     },
+    beforeRouteLeave (to, from, next) {
+      if (this.addedToCart){
+        next(true);
+      } else {
+        const response = confirm('You have not added your robot to your cart, are you sure you want to leave?');
+        next(response);
+      }
+    },
     data() {
       return {
         availableParts,
@@ -93,6 +101,7 @@
         this.cart.push(Object.assign({}, robot, {
           cost
         }));
+        this.addedToCart = true;
       },
     }
   }
