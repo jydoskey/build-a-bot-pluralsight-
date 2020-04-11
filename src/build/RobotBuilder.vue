@@ -20,7 +20,7 @@
 
     </div>
     <div class="top-row">
-      <div class="top part" :class="{'sale-border': selectedRobot.head.onSale}">
+      <div class="top part" :class="{'': selectedRobot.head.onSale}">
         <div class="robot-name">{{selectedRobot.head.title}}<span v-if="selectedRobot.head.onSale" class="sale">
             Sale!</span></div>
         <PartSelector :parts="availableParts.heads" position="top" @partSelected="part => selectedRobot.head=part" />
@@ -225,10 +225,6 @@
     width: 210px;
     padding: 2px;
     font-size: 16px;
-  }
-
-  .sale-border {
-    border: 3px solid red;
   }
 
   .preview {
