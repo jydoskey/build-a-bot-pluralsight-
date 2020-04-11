@@ -73,7 +73,7 @@
     },
     computed: {
       availableParts() {
-        return this.$store.state.parts;
+        return this.$store.state.robots.parts;
       },
       headBorderStyle() {
         return {
