@@ -60,6 +60,7 @@
     },
     data() {
       return {
+        addedToCart: false,
         cart: [],
         selectedRobot: {
           head: {},
