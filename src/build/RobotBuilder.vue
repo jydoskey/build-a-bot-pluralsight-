@@ -86,7 +86,7 @@
       addToCart() {
         const robot = this.selectedRobot;
         const cost = robot.head.cost + robot.leftArm.cost + robot.torso.cost + robot.rightArm.cost + robot.base.cost;
-        this.$store.commit('addRobotToCart', Object.assign({}, robot, {
+        this.$store.dispatch('addRobotToCart', Object.assign({}, robot, {
           cost
         }));
         this.addedToCart = true;
