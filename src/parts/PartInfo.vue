@@ -5,9 +5,11 @@
   </div>
 </template>
 <script>
-  import parts from '@/data/parts';
   export default {
     name: 'PartInfo',
+    created() {
+      this.$store.dispatch('getParts')
+    },
     props: {
       partType: {
         type: String
@@ -25,7 +27,7 @@
           partType,
           id
         } = this;
-        return parts[partType].find((part) => part.id === +id);
+        return this.$store.state.parts[partType].find((part) => part.id === +id);
       },
     },
   };
